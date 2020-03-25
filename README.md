@@ -22,8 +22,17 @@ Billy uses PostgreSQL database, on beggining of run Billy searches for enviromen
 
 Export it or leave it default if you are running database instance locally.
 
-Then you can run the bot with.
+Bot uses custom modules, you can install them with.
 ```
+pipenv install
+```
+This will create virtual enviroment, then you can run the bot.
+```
+pipenv run python3 billy.py
+```
+Or you can exec to the pipenv shell.
+```
+pipenv shell
 python3 billy.py
 ```
 
