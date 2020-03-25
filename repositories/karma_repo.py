@@ -10,11 +10,7 @@ class KarmaRepo:
 
     def _fetch_karma(self, clientId, guildId):
         karma = Karma.select() \
-<<<<<<< HEAD
              .where((Karma.client == clientId) & (Karma.guild == guildId)) \
-=======
-             .where((Karma.client == clientId) & (Karma.guildId == guildId)) \
->>>>>>> Add V1.2.4
              .first()
 
         return karma
