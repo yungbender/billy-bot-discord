@@ -37,6 +37,15 @@ pipenv shell
 
 Then you can run the bot with.
 ```
+pipenv install
+```
+This will create virtual enviroment, then you can run the bot.
+```
+pipenv run python3 billy.py
+```
+Or you can exec to the pipenv shell.
+```
+pipenv shell
 python3 billy.py
 ```
 
