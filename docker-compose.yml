@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  billy_dev_database:
+    image: centos/postgresql-10-centos7
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRESQL_DATABASE=billy-db
+      - POSTGRESQL_USER=billy
+      - POSTGRESQL_PASSWORD=billy_pwd
+    container_name: billy-db
+    volumes:
+      - /var/lib/pgsql/data
