@@ -12,6 +12,7 @@ from repositories.prefix_repo import PrefixRepo
 
 CORONA_REFRESH_SECONDS = 60
 CORONA_CHANNELS = [682718612179386388, 573634340525703168]
+GIT = "https://github.com/yungbender/billy-bot-discord"
 
 class Interaction(commands.Cog):
     def __init__(self, bot):
