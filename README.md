@@ -33,6 +33,8 @@ pipenv run python3 billy.py
 Or you can exec to the pipenv shell.
 ```
 pipenv shell
+Then you can run the bot with.
+```
 python3 billy.py
 ```
 
