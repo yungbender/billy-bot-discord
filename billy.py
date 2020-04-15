@@ -124,6 +124,12 @@ class Billy(commands.Bot):
 		type_, value, tb = sys.exc_info()
 		ex_content = traceback.format_exception(type_, value, tb)
 		ex_content = " ".join(e for e in ex_content)
+
+		# Check for the stupid restart of cogs.
+		# TODO: fix this
+		if "is already registered." in ex_content:
+			return
+
 		LOGGER.exception(f"Unexpected exception on event: {event}. Args: {args} Kwargs: {kwargs}. Content: {ex_content}")
 
 		if not self.logging_channel:
@@ -135,6 +141,11 @@ class Billy(commands.Bot):
 		""" Handler for internal errors for logging into server text room. """
 		ex_content = traceback.format_exception(type(ex), ex, ex.__traceback__)
 		ex_content = " ".join(e for e in ex_content)
+
+		# Check for the stupid restart of cogs.
+		# TODO: fix this
+		if "is already registered." in ex_content:
+			return
 
 		LOGGER.exception(f"Unexpected exception on event: {ctx.message.content}. Args: {ctx.args} Kwargs: {ctx.kwargs}. Content: {ex_content}")
 
